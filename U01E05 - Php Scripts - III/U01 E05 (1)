@@ -1,0 +1,14 @@
+<?php
+// Step 1: Convert text into an array
+$text = "This is a simple sentence used to demonstrate array_chunk in PHP.";
+$textArray = explode(" ", $text); // Split text by spaces into an array
+
+// Step 2: Split the array into chunks of specified length
+$chunkSize = 3; // Example chunk size
+$chunks = array_chunk($textArray, $chunkSize);
+
+// Display the chunks
+echo "<pre>";
+print_r($chunks);
+echo "</pre>";
+?>

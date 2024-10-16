@@ -1,0 +1,6 @@
+//The chunk_split() function splits a string into a series of smaller parts
+
+<?php
+$str = "Split the string after each character ";
+echo chunk_split($str,1,".");
+?>

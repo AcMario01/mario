@@ -1,0 +1,13 @@
+<?php
+// Crear un array de 3000 números aleatorios entre 1 y 1000
+$numerosAleatorios = array(rand(1, 1000), range(1, 3000));
+//fn sirve para crear funciones de flecha .
+
+// Contar la frecuencia de cada número en el array
+$frecuencia = array_count_values($numerosAleatorios);
+
+// Mostrar los resultados
+echo "\n";
+print_r($frecuencia);
+echo "\n";
+?>

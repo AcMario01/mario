@@ -1,0 +1,26 @@
+<?php
+// functionsArrayBi.php
+
+// Function to return row 'x' from the 2D array
+function searchFilaArrayBi($array, $rowIndex) {
+    if (!isset($array[$rowIndex])) {
+        return null; // Return null if the row doesn't exist
+    }
+    return $array[$rowIndex];
+}
+
+// Function to return column 'y' from the 2D array
+function searchColumnaArrayBi($array, $colIndex) {
+    $column = [];
+    
+    // Loop through each row in the array
+    foreach ($array as $row) {
+        if (isset($row[$colIndex])) {
+            $column[] = $row[$colIndex]; // Add the value if column exists in the row
+        } else {
+            return null; // Return null if the column doesn't exist
+        }
+    }
+    
+    return $column;
+}

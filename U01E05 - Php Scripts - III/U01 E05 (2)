@@ -1,0 +1,61 @@
+<?php
+// Creación del array de alumnos con sus notas en distintas asignaturas
+$alumnos = [
+    ['nombre' => 'Pedro', 'math' => 7, 'science' => 8, 'PE' => 9, 'languages' => 6],
+    ['nombre' => 'Maria', 'math' => 6, 'science' => 7, 'PE' => 8, 'languages' => 9],
+    ['nombre' => 'Juan', 'math' => 9, 'science' => 6, 'PE' => 7, 'languages' => 8],
+];
+
+// a. Extraer los nombres de los alumnos usando array_column
+function obtenerNombresAlumnos($alumnos) {
+    return array_column($alumnos, 'nombre');
+}
+
+echo "Nombres de los Alumnos: ";
+print_r(obtenerNombresAlumnos($alumnos));
+echo "\n";
+
+// b. Calcular la media de las notas de una asignatura específica usando array_column
+function mediaAsignatura($alumnos, $asignatura) {
+    $notas = array_column($alumnos, $asignatura); // Extrae las notas de la asignatura
+    $media  = array_sum($notas) / count($notas); // Calcula la media 
+    return $media ;
+}
+
+echo "Media de notas en Matemáticas: " . mediaAsignatura($alumnos, 'math') . "\n";
+
+// c. Calcular la media de las notas de un alumno específico
+function mediaAlumno($alumnos, $nombreAlumno) {
+    // Buscar al alumno en el array
+    foreach ($alumnos as $alumno) {
+        if ($alumno['nombre'] === $nombreAlumno) {
+            $notas = array_slice($alumno, 1); // Extrae las notas excluyendo el nombre
+            $media  = array_sum($notas) / count($notas);
+            return $media ;
+        }
+    }
+    return null; // Devuelve null si el alumno no existe
+}
+
+echo "Media de notas de Juan: " . mediaAlumno($alumnos, 'Juan') . "\n";
+
+// d. Verificar si un alumno existe y mostrar sus notas
+function mostrarNotasAlumno($alumnos, $nombreAlumno) {
+    foreach ($alumnos as $alumno) {
+        if ($alumno['nombre'] === $nombreAlumno) {
+            return $alumno;
+        }
+    }
+    return null; // Devuelve null si el alumno no existe
+}
+
+$nombreBuscar = 'Maria';
+$notasAlumno = mostrarNotasAlumno($alumnos, $nombreBuscar);
+
+if ($notasAlumno) {
+    echo "Notas de $nombreBuscar: ";
+    print_r($notasAlumno);
+} else {
+    echo "$nombreBuscar no existe.\n";
+}
+?>

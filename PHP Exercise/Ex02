@@ -1,0 +1,14 @@
+//Create a script, given 1 arrays of numbers from 1 to 100, sort it.//
+
+// count(mixed$array_or_countale, int $mode = COUNT_:NORMAL): int//
+
+<?php
+// Create an array of numbers from 1 to 100
+$numbers = range(1, 100);
+
+sort($numbers);
+
+foreach ($numbers as $number) {
+    echo $number . " ";
+}
+?>

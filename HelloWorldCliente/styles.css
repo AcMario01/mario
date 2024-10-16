@@ -1,0 +1,8 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header h1 {
+    color: #4c8baf; 
+    font-family: 'Courier New', Courier, monospace; /* Cambiar fuente */
+}

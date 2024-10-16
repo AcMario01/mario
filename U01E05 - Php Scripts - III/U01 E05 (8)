@@ -1,0 +1,18 @@
+<?php
+// Crearemos dos arrays de 300 números aleatorios entre 1 y 1000
+$array1 = array();
+$array2 = array();
+
+// Dará 300 números aleatorios del 1 al 1000 en ambos arrays
+for ($i = 0; $i < 300; $i++) {
+    $array1[] = rand(1, 1000); 
+    $array2[] = rand(1, 1000);
+}
+
+// Usaremos el array_intersect para encontrar los elementos comunes
+$result = array_intersect($array1, $array2);
+
+// Resultado
+echo "Elementos comunes entre los dos arrays: \n";
+print_r($result);
+?>

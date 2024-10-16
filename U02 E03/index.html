@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ejercicio 3 </title>
+    <style>
+:root {
+    --main-bg-color: rgb(32, 153, 16);
+    --main-txt-color: rgb(93, 93, 204);  
+    --main-padding: 15px;  
+    --main-margin: 1em;
+}
+
+/* Lo más adecuado es emplear una clase, pero con IDs probamos que las variables se reemplazan tantas veces como sea necesario */
+#div1 {
+    background-color: var(--main-bg-color);
+    color: var(--main-txt-color);  
+    padding: var(--main-padding);
+    margin: var(--main-margin);
+}
+</style>
+</head>
+<body>
+
+    <h1> Estilos: Trabajando con textos. </h1>
+<i> <b>Párrafo con estilos que se aplican por ser el primer párrafo del documento. Este párrafo esta en negrita y cursiva y también ha sido indentado. Todo esta realizado desde la hoja de estilos en cascada o CSS.</i></b>
+
+<div id="div1"> Se aconseja el uso de estilos para el diseño de la página, aunque el HTML permite añadir atributos y otras posibilidades para el diseño la tendencia es que acabe utilizandose exclusivamente para los contenidos. </div>
+<div id="div2"> Estilo en linea (las letras mayúsculas se consiguen con CSS) </div>
+<div id="div3"> Estilo para las etiquetas <h3> (afecta a todas las etiquetas <h3>). Solo recomendable para estilos muy genéricos </div>
+<div id="div4"> Estilo para la clase .clase (se aplica a cualquier etiqueta cuya clase sea establecida a este tipo). Siempre empieza por un punto. </div>
+<div id="div5"> Esto es un texto en una etiqueta h4 pero le aplicamos la misma clase que al parrafo anterior (.clase) </div>
+<div id="div6"> Estilo a un id (se aplica al elemento que este identificado con ese id). En una página cada id debe ser exclusivo de una sola etiqueta (lo que hemos hecho en esta página con un id repetido sería incorrecto) </div>
+</body>
+
+</html>

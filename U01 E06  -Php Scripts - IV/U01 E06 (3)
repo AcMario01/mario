@@ -1,0 +1,18 @@
+//The explode() function breaks a string into an array.
+//The "separator" parameter cannot be an empty string.
+//This function is binary-safe.
+<?php
+$street_names = "calle uno,Calle dos,Calle leonardo Da Vinci,Calle Camino de Leganes,Calle final";
+
+// Use explode to split the string by commas
+$street_array = explode(",", $street_names);
+
+// Remove the "Calle" part and make the first letter of each street name uppercase
+$cleaned_streets = [];
+foreach ($street_array as $street) {
+    $cleaned_streets[] = ucfirst(trim(str_replace("Calle", "", $street)));
+}
+// Join the array with a dash separator
+$output = implode("—", $cleaned_streets);
+echo $output;
+?>

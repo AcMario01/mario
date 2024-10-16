@@ -1,0 +1,8 @@
+<?php
+//Create an array of 30 elements, starting in 5 position, and value DAW. Use Array_fill
+$a = array_fill(5, 26, 'DAW');
+
+print_r($a);
+
+
+?>

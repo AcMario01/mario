@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Formulario PHP</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <h1 class="title">Formulario </h1>
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post"> 
+            <h2> Registro </h2>
+            Name: <input type="text" name="user-name" value=>
+            <br><br>
+            Contraseña: <input type="password" name="password" value=>
+            <br><br>
+            <input type="submit" value="Submit">
+            <?php 
+                include ("validar-form.php"); 
+            ?>
+        </form>
+    </body>
+</html>

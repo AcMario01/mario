@@ -1,0 +1,20 @@
+//1 
+//The trim() function removes whitespace and other predefined characters from both sides of a string.
+<?php
+$text = " This is some example text with extra spaces ";
+$trimmed_text = trim($text);
+
+//2 Count the frequency of each character
+$char_count = count_chars($trimmed_text, 1);
+
+//3 Find the most frequent character
+$most_frequent_char = array_search(max($char_count), $char_count);
+
+//Result 2 and 3: Display the trimmed text and most frequent character count
+echo "Trimmed text: " . $trimmed_text . "\n";
+echo "Most frequent character (ASCII): " . $most_frequent_char . " (Character: " . chr($most_frequent_char) . ")\n";
+
+//Result: Remove the most frequent character from the string
+$modified_text = str_replace(chr($most_frequent_char), '', $trimmed_text);
+echo "Text after removing the most frequent character: " . $modified_text;
+?>

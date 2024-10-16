@@ -1,0 +1,15 @@
+<?php
+	$n1=[];
+	$n2=[];
+	for($i = 0; $i < 300; $i++){
+	  $n1[$i] = random_int(min: 0, max: 100);
+	  $n2[$i] = random_int(min: 0, max: 100);
+	}
+	//print_r($n1);
+	//print_r($n2);
+	$result= array_diff(array: $n1, arrays: $n2);
+	//compactedArray=compact($result);
+	for($i = 0; $i < count(value: $result); $i++){
+	  echo: "Number: $i frequency $result [$i] <br>";
+	}
+?>

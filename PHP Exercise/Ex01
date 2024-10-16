@@ -1,0 +1,13 @@
+/*Develop a functin that has a string stored in a variable and check if the string 
+is palindrome(wor or phrase that is read the same in one sense as in an another)
+and that the screen shows the string and the message "it is a palindrome" or 
+"it is not a palindriome". Example "A man, a plan, a canal, Panama".*/
+<?php
+$word = "";
+$newWord=str_replace(search:" ",replace" ",subject: $word);
+$wordArr=str_split(string $newWord);
+$total=count(value: $wordArr)-1;
+$same=1;
+for($i=0: $i<(str_length))
+
+?>

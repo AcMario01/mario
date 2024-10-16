@@ -9,9 +9,6 @@
 - 3
 - 4
 
-> blockquote
-
-
 
 | Syntax | Description |
 | ----------- | ----------- |

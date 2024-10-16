@@ -1,0 +1,9 @@
+<?php
+// 4. Jules Verne's Bibliography from two sources
+$julio_verne_biblio1 = "Five Weeks in a Balloon, Journey to the Center of the Earth, From the Earth to the Moon, Twenty Thousand Leagues Under the Sea, Around the World in Eighty Days, The Mysterious Island";
+$julio_verne_biblio2 = "Journey to the Center of the Earth, From the Earth to the Moon, Twenty Thousand Leagues Under the Sea, Around the World in Eighty Days, Five Weeks in a Balloon, The Mysterious Island";
+
+// Calculate similarity between two bibliographies using similar_text()
+$similarity = similar_text($julio_verne_biblio1, $julio_verne_biblio2, $percent);
+echo "The similarity between the two bibliographies is: $percent%";
+?>

@@ -1,0 +1,72 @@
+<?php
+// functionsArrays.php
+
+// Function to find the minimum value in an array
+function searchMinimumValue($array) {
+    if (empty($array)) {
+        return null; // Return null if the array is empty
+    }
+    return min($array);
+}
+
+// Function to find the maximum value in an array
+function searchMaxValue($array) {
+    if (empty($array)) {
+        return null; // Return null if the array is empty
+    }
+    return max($array);
+}
+
+// Function to calculate the average (mean) of an array
+function mediaArray($array) {
+    if (empty($array)) {
+        return null; // Return null if the array is empty
+    }
+    return array_sum($array) / count($array);
+}
+
+// Function to check if a value is in the array and return its position
+function isInArray($array, $value) {
+    $position = array_search($value, $array); // Search for the value in the array
+    return ($position !== false) ? $position : -1; // Return position or -1 if not found
+}
+?>
+
+
+
+<?php
+// main.php
+
+// Example array to work with
+$myArray = [8, 7, 11, 6, 9, 21];
+
+// Finding the minimum value in the array
+$minValue = searchMinimumValue($myArray);
+echo "Minimum value: $minValue\n";
+
+// Finding the maximum value in the array
+$maxValue = searchMaxValue($myArray);
+echo "Maximum value: $maxValue\n";
+
+// Calculating the average of the array
+$average = mediaArray($myArray);
+echo "Average value: $average\n";
+
+// Checking if a number exists in the array and getting its position
+$searchValue = 11;
+$position = isInArray($myArray, $searchValue);
+if ($position != -1) {
+    echo "$searchValue is found at position: $position\n";
+} else {
+    echo "$searchValue is not in the array\n";
+}
+
+// Checking if a number that doesn't exist in the array
+$searchValue = 21;
+$position = isInArray($myArray, $searchValue);
+if ($position != -1) {
+    echo "$searchValue is found at position: $position\n";
+} else {
+    echo "$searchValue is not in the array\n";
+}
+?>

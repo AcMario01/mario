@@ -1,0 +1,8 @@
+<?php
+$a = array('Pedro', 'Maria', 'Juan');
+$b = array('Valverde', 'Perez', 'Lopez');
+$associative = array_combine($a, $b);
+print_r($a);
+print_r($b);
+print_r($associative);
+?>
