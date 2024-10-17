@@ -1,0 +1,18 @@
+// Make a script that given an array of numbers and a number.
+1. Remove all numbers greater than the numbers from the array and display the removed ones.  (a number over the limit of the array)
+
+<?php
+
+for($i=0;$i<count($a1);$i++){
+
+}
+
+
+?>
+
+
+2. Remove from the array all 5 numbers inmediatley greater than the number and display the removed ones.
+
+<?php
+?>
+*//

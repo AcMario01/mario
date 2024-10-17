@@ -1,13 +1,37 @@
-/*Develop a functin that has a string stored in a variable and check if the string 
+/*Develop a function that has a string stored in a variable and check if the string 
 is palindrome(wor or phrase that is read the same in one sense as in an another)
 and that the screen shows the string and the message "it is a palindrome" or 
 "it is not a palindriome". Example "A man, a plan, a canal, Panama".*/
 <?php
-$word = "";
-$newWord=str_replace(search:" ",replace" ",subject: $word);
-$wordArr=str_split(string $newWord);
-$total=count(value: $wordArr)-1;
-$same=1;
-for($i=0: $i<(str_length))
+$string = "anita lava la tina";
+function palindrome ($string){
+    $string = str_replace(" ", "", $string);
+    $string = strtolower($string);
+    $string2 = strrev($string);
+    if ($string == $string2){
+        echo "It is a palindrome";
+    }else{
+        echo "It is not a palindrome";
+    }
+}
+
+return palindrome($string);
+
+$word = "anitalavalatina";
+str_split($word,1);
+$longitud = strlen($word)-1;
+$igual = 1;
+for ($i = 0; $i < (strlen($word))/2; $i++){
+   if ($word[$i] != $word[$longitud]){
+         $igual = 0;
+    }
+    $longitud--;
+}
+
+if  ($igual == 0){
+    echo "It is not a palindrome";
+}else{
+    echo "It is a palindrome";
+}
 
 ?>

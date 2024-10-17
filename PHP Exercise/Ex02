@@ -3,12 +3,23 @@
 // count(mixed$array_or_countale, int $mode = COUNT_:NORMAL): int//
 
 <?php
-// Create an array of numbers from 1 to 100
-$numbers = range(1, 100);
+$a1 = [5, 3, 2, 8, 1, 4];
 
-sort($numbers);
+echo "Array desordenado: ";
+print_r($a1);
 
-foreach ($numbers as $number) {
-    echo $number . " ";
+
+
+for ($i = 0; $i < count($a1); $i++) {
+   for ($j = 0; $j < count($a1) - 1; $j++) {
+       if ($a1[$j] > $a1[$j + 1]) {
+           $temp = $a1[$j];
+           $a1[$j] = $a1[$j + 1];
+           $a1[$j + 1] = $temp;
+       }
+   }
 }
+echo "<br>Array desordenado: ";
+print_r($a1);
+
 ?>
