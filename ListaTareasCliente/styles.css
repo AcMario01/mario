@@ -1,0 +1,9 @@
+html, body {
+    color: #4c8baf; 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif 
+}
+
+#taskList {
+    list-style: none;
+
+}
